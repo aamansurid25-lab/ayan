@@ -1,0 +1,1464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Ayaan Ashik Mansuri | Personal Portfolio</title>
+
+<style>
+
+/* ================= GENERAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #222;
+    line-height: 1.6;
+}
+
+section {
+    padding: 70px 8%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 40px;
+    color: #172554;
+}
+
+
+/* ================= NAVIGATION ================= */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #111827;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav ul li a:hover {
+    color: #38bdf8;
+}
+
+
+/* ================= HOME ================= */
+
+.hero {
+    min-height: 90vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 40px 20px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #0f172a,
+        #1e3a8a
+    );
+
+    color: white;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+
+/* ================= PROFILE PHOTO ================= */
+
+.profile-photo {
+    width: 190px;
+    height: 190px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 5px solid white;
+
+    margin-bottom: 20px;
+
+    box-shadow:
+    0 8px 25px rgba(0,0,0,0.35);
+}
+
+
+.hero-content h1 {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.hero-content h2 {
+    font-size: 24px;
+    color: #38bdf8;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    max-width: 750px;
+    margin: auto;
+    font-size: 18px;
+}
+
+.location {
+    margin-top: 15px;
+    font-size: 17px;
+}
+
+.btn {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    padding: 12px 28px;
+
+    background: #38bdf8;
+
+    color: #07111f;
+
+    text-decoration: none;
+
+    border-radius: 25px;
+
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: white;
+    transform: scale(1.05);
+}
+
+
+/* ================= ABOUT ================= */
+
+.about-container {
+    max-width: 950px;
+
+    margin: auto;
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 15px;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,0.08);
+}
+
+.about-container p {
+    margin-bottom: 18px;
+    font-size: 17px;
+}
+
+
+/* ================= DETAILS ================= */
+
+.details-container {
+    max-width: 900px;
+
+    margin: 40px auto 0;
+
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(200px, 1fr));
+
+    gap: 20px;
+}
+
+.detail-card {
+    background: white;
+
+    padding: 25px;
+
+    text-align: center;
+
+    border-radius: 15px;
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,0.07);
+}
+
+.detail-card h3 {
+    color: #1d4ed8;
+    margin-bottom: 8px;
+}
+
+
+/* ================= EDUCATION ================= */
+
+.education-container {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+}
+
+.education-card {
+    background: white;
+
+    width: 330px;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,0.08);
+}
+
+.education-card h3 {
+    color: #1d4ed8;
+    margin-bottom: 15px;
+}
+
+.percentage {
+    font-size: 32px;
+
+    font-weight: bold;
+
+    color: #0f766e;
+
+    margin-top: 10px;
+}
+
+
+/* ================= SKILLS ================= */
+
+.skills-container {
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 20px;
+
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+.skill-card {
+    background: white;
+
+    padding: 25px;
+
+    text-align: center;
+
+    border-radius: 15px;
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,0.08);
+}
+
+.skill-card h3 {
+    color: #1d4ed8;
+    margin-bottom: 10px;
+}
+
+
+/* ================= HOBBIES ================= */
+
+.hobbies {
+    background: #eaf2ff;
+}
+
+.hobby-container {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 20px;
+}
+
+.hobby-card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,0.07);
+}
+
+.hobby-card h3 {
+    margin-bottom: 10px;
+    color: #1e40af;
+}
+
+
+/* ================= TECHNOLOGY ================= */
+
+.technology {
+    background: #f1f5f9;
+}
+
+.technology-container {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(230px, 1fr));
+
+    gap: 20px;
+}
+
+.technology-card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,0.07);
+}
+
+.technology-card h3 {
+    color: #1d4ed8;
+    margin-bottom: 10px;
+}
+
+
+/* ================= THOUGHTS ================= */
+
+.thought-box {
+    max-width: 900px;
+
+    margin: auto;
+
+    background: white;
+
+    padding: 40px;
+
+    border-left:
+    6px solid #2563eb;
+
+    border-radius: 10px;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,0.08);
+}
+
+.thought-box p {
+    font-size: 19px;
+    text-align: center;
+}
+
+
+/* ================= PROJECTS ================= */
+
+.projects-container {
+    max-width: 900px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 20px;
+}
+
+.project-card {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,0.07);
+
+    text-align: center;
+}
+
+.project-card h3 {
+    color: #1d4ed8;
+    margin-bottom: 10px;
+}
+
+
+/* ================= CAREER ================= */
+
+.career {
+    background: #0f172a;
+    color: white;
+}
+
+.career .section-title {
+    color: white;
+}
+
+.career-content {
+    max-width: 900px;
+
+    margin: auto;
+
+    text-align: center;
+
+    font-size: 18px;
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact-container {
+    max-width: 750px;
+
+    margin: auto;
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 15px;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,0.08);
+}
+
+.contact-info {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.contact-info p {
+    margin: 8px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+
+    padding: 13px;
+
+    margin: 8px 0;
+
+    border:
+    1px solid #ccc;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+}
+
+form textarea {
+    height: 130px;
+    resize: none;
+}
+
+form button {
+    width: 100%;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #1d4ed8;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #020617;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+    .hero-content h2 {
+        font-size: 20px;
+    }
+
+    .profile-photo {
+        width: 150px;
+        height: 150px;
+    }
+
+    section {
+        padding: 50px 5%;
+    }
+
+    .section-title {
+        font-size: 30px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVIGATION ================= -->
+
+<nav>
+
+<div class="logo">
+Ayaan's Portfolio
+</div>
+
+<ul>
+
+<li><a href="#home">Home</a></li>
+
+<li><a href="#about">About</a></li>
+
+<li><a href="#education">Education</a></li>
+
+<li><a href="#skills">Skills</a></li>
+
+<li><a href="#hobbies">Hobbies</a></li>
+
+<li><a href="#technology">Interests</a></li>
+
+<li><a href="#thoughts">Thoughts</a></li>
+
+<li><a href="#projects">Projects</a></li>
+
+<li><a href="#career">Career</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+
+<!-- ================= HOME ================= -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+
+<!-- YOUR PHOTO -->
+
+<img
+src="ayaan.jpg"
+alt="Ayaan Ashik Mansuri"
+class="profile-photo"
+>
+
+
+<h1>
+Ayaan Ashik Mansuri
+</h1>
+
+
+<h2>
+Diploma Electronics Engineering Student
+</h2>
+
+
+<p>
+
+Hello! I am Ayaan Ashik Mansuri,
+a 17-year-old Electronics Engineering
+student passionate about technology,
+electronics, programming, creativity
+and continuous learning.
+
+</p>
+
+
+<div class="location">
+
+📍 Kalyan, Maharashtra, India
+
+</div>
+
+
+<a href="#about" class="btn">
+Explore My Portfolio
+</a>
+
+</div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about">
+
+<h2 class="section-title">
+About Me
+</h2>
+
+
+<div class="about-container">
+
+<p>
+
+My name is
+<strong>Ayaan Ashik Mansuri</strong>
+and I am 17 years old.
+
+I live in Kalyan, Maharashtra, India,
+and I am currently pursuing a Diploma
+in Electronics Engineering.
+
+</p>
+
+
+<p>
+
+I consider myself a friendly and
+helpful person. I enjoy interacting
+with people and believe in treating
+others with kindness, respect and
+mercy.
+
+</p>
+
+
+<p>
+
+I am very interested in understanding
+how electronics works at its fundamental
+level and how technology can make
+everyday work easier, faster and
+more efficient.
+
+</p>
+
+
+<p>
+
+I enjoy learning about chips, Arduino,
+electronic components and practical
+electronics projects.
+
+I want to create things that are not
+only technically interesting but also
+useful for society.
+
+</p>
+
+
+<p>
+
+I am also learning the
+<strong>Turkish language 🇹🇷</strong>
+because I enjoy learning new languages
+and exploring different cultures.
+
+</p>
+
+
+<p>
+
+I am curious about advanced technologies,
+semiconductor fabrication and emerging
+technologies such as
+<strong>Neuralink</strong>.
+
+I would like to explore how electronics,
+semiconductors and technology can shape
+the future.
+
+</p>
+
+</div>
+
+
+<div class="details-container">
+
+
+<div class="detail-card">
+
+<h3>Name</h3>
+
+<p>
+Ayaan Ashik Mansuri
+</p>
+
+</div>
+
+
+<div class="detail-card">
+
+<h3>Age</h3>
+
+<p>
+17 Years
+</p>
+
+</div>
+
+
+<div class="detail-card">
+
+<h3>Location</h3>
+
+<p>
+Kalyan, Maharashtra
+</p>
+
+</div>
+
+
+<div class="detail-card">
+
+<h3>Branch</h3>
+
+<p>
+Electronics Engineering
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= EDUCATION ================= -->
+
+<section id="education">
+
+<h2 class="section-title">
+Educational Details
+</h2>
+
+
+<div class="education-container">
+
+
+<div class="education-card">
+
+<h3>SSC</h3>
+
+<p>
+Secondary School Certificate
+</p>
+
+<div class="percentage">
+94.40%
+</div>
+
+</div>
+
+
+<div class="education-card">
+
+<h3>Diploma - First Year</h3>
+
+<p>
+Electronics Engineering
+</p>
+
+<div class="percentage">
+85.00%
+</div>
+
+</div>
+
+
+<div class="education-card">
+
+<h3>Current Course</h3>
+
+<p>
+Diploma in Electronics Engineering
+</p>
+
+<div class="percentage">
+Electronics
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- ================= SKILLS ================= -->
+
+<section id="skills">
+
+<h2 class="section-title">
+My Skills
+</h2>
+
+
+<div class="skills-container">
+
+
+<div class="skill-card">
+
+<h3>💻 Programming</h3>
+
+<p>
+C and C++
+</p>
+
+</div>
+
+
+<div class="skill-card">
+
+<h3>⚡ Electronics</h3>
+
+<p>
+Basic Electronics and Electronic Circuits
+</p>
+
+</div>
+
+
+<div class="skill-card">
+
+<h3>🔢 Digital Electronics</h3>
+
+<p>
+Digital Electronics concepts and circuits
+</p>
+
+</div>
+
+
+<div class="skill-card">
+
+<h3>🔧 Electronics Projects</h3>
+
+<p>
+Designing and building practical
+electronics projects
+</p>
+
+</div>
+
+
+<div class="skill-card">
+
+<h3>👑 Leadership</h3>
+
+<p>
+Leadership and teamwork
+</p>
+
+</div>
+
+
+<div class="skill-card">
+
+<h3>🏊 Swimming</h3>
+
+<p>
+Swimming skills
+</p>
+
+</div>
+
+
+<div class="skill-card">
+
+<h3>🎭 Acting</h3>
+
+<p>
+Acting and dialogue delivery
+</p>
+
+</div>
+
+
+<div class="skill-card">
+
+<h3>🌍 Turkish Language</h3>
+
+<p>
+Currently learning Turkish
+language
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- ================= HOBBIES ================= -->
+
+<section class="hobbies" id="hobbies">
+
+<h2 class="section-title">
+My Hobbies & Interests
+</h2>
+
+
+<div class="hobby-container">
+
+
+<div class="hobby-card">
+
+<h3>📚 Historical Books</h3>
+
+<p>
+
+I enjoy reading historical books
+and learning about important events,
+civilizations and people.
+
+</p>
+
+</div>
+
+
+<div class="hobby-card">
+
+<h3>🎬 Historical Series</h3>
+
+<p>
+
+I enjoy watching historical series
+and learning about different events
+and perspectives.
+
+</p>
+
+</div>
+
+
+<div class="hobby-card">
+
+<h3>🔎 Myth & Facts</h3>
+
+<p>
+
+I like understanding what is myth
+and what is fact and discovering
+how historical stories originated.
+
+</p>
+
+</div>
+
+
+<div class="hobby-card">
+
+<h3>⚡ Electronics</h3>
+
+<p>
+
+I enjoy learning about chips,
+Arduino, circuits and even the
+smallest electronic components.
+
+</p>
+
+</div>
+
+
+<div class="hobby-card">
+
+<h3>🇹🇷 Turkish Language</h3>
+
+<p>
+
+I am interested in learning Turkish
+and exploring its language and culture.
+
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- ================= TECHNOLOGY ================= -->
+
+<section class="technology" id="technology">
+
+<h2 class="section-title">
+Technology & Future Interests
+</h2>
+
+
+<div class="technology-container">
+
+
+<div class="technology-card">
+
+<h3>🏭 TeraFab</h3>
+
+<p>
+
+I am very interested in learning
+about <strong>TeraFab</strong>
+and exploring the world of
+semiconductor fabrication.
+
+I want to understand how
+semiconductor chips are designed,
+manufactured and used in modern
+electronic devices.
+
+</p>
+
+</div>
+
+
+<div class="technology-card">
+
+<h3>🤖 Neuralink</h3>
+
+<p>
+
+I am interested in exploring
+emerging technologies such as
+<strong>Neuralink</strong> and
+understanding how electronics,
+technology and the human body
+can interact in the future.
+
+</p>
+
+</div>
+
+
+<div class="technology-card">
+
+<h3>🧠 Arduino & Chips</h3>
+
+<p>
+
+I enjoy learning about Arduino,
+microcontrollers, chips and
+electronic components of
+different sizes.
+
+</p>
+
+</div>
+
+
+<div class="technology-card">
+
+<h3>💡 Electronics for Society</h3>
+
+<p>
+
+I want to understand how
+electronics can simplify human
+work and help solve practical
+problems in society.
+
+</p>
+
+</div>
+
+
+<div class="technology-card">
+
+<h3>🚀 Future Technology</h3>
+
+<p>
+
+I am curious about new technologies
+and want to continuously explore
+innovations in electronics,
+semiconductors and computing.
+
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- ================= THOUGHTS ================= -->
+
+<section id="thoughts">
+
+<h2 class="section-title">
+My Thoughts
+</h2>
+
+
+<div class="thought-box">
+
+<p>
+
+"For me, electronics is not only about
+circuits, chips and components.
+
+I am interested in understanding how
+technology can make human life easier.
+
+I want to keep learning, experiment
+with new ideas and eventually create
+something that is genuinely useful
+for society."
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ================= PROJECTS ================= -->
+
+<section id="projects">
+
+<h2 class="section-title">
+My Project Interests
+</h2>
+
+
+<div class="projects-container">
+
+
+<div class="project-card">
+
+<h3>⚙️ Electronics Projects</h3>
+
+<p>
+
+I enjoy creating practical
+electronics projects and
+experimenting with different
+electronic components.
+
+</p>
+
+</div>
+
+
+<div class="project-card">
+
+<h3>🤖 Arduino Projects</h3>
+
+<p>
+
+I am interested in using Arduino
+and microcontrollers to build
+useful and interactive projects.
+
+</p>
+
+</div>
+
+
+<div class="project-card">
+
+<h3>💡 Future Ideas</h3>
+
+<p>
+
+I want to develop innovative
+projects that can solve
+real-world problems and
+benefit society.
+
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- ================= CAREER ================= -->
+
+<section class="career" id="career">
+
+<h2 class="section-title">
+My Career Goal
+</h2>
+
+
+<div class="career-content">
+
+<p>
+
+My current career goal is to pursue
+an <strong>MS in the USA 🇺🇸</strong>
+and develop strong technical knowledge,
+practical skills and international
+exposure.
+
+</p>
+
+
+<br>
+
+
+<p>
+
+In the future, I would also like to
+become an entrepreneur.
+
+I am interested in the
+<strong>real-estate business</strong>
+and several other business ideas
+that I would like to explore as
+I gain more knowledge and experience.
+
+</p>
+
+
+<br>
+
+
+<p>
+
+My long-term aim is to combine
+technology, creativity and
+entrepreneurship to create something
+valuable and useful for society.
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact">
+
+<h2 class="section-title">
+Contact Me
+</h2>
+
+
+<div class="contact-container">
+
+
+<div class="contact-info">
+
+<p>
+
+<strong>Name:</strong>
+Ayaan Ashik Mansuri
+
+</p>
+
+
+<p>
+
+<strong>Location:</strong>
+Kalyan, Maharashtra, India
+
+</p>
+
+
+<p>
+
+<strong>Phone:</strong>
+9326403486
+
+</p>
+
+
+<p>
+Feel free to send me a message
+using the form below.
+</p>
+
+</div>
+
+
+<form onsubmit="sendMessage(event)">
+
+
+<input
+type="text"
+id="name"
+placeholder="Enter your name"
+required
+>
+
+
+<input
+type="email"
+id="email"
+placeholder="Enter your email"
+required
+>
+
+
+<textarea
+id="message"
+placeholder="Write your message..."
+required
+></textarea>
+
+
+<button type="submit">
+Send Message
+</button>
+
+
+</form>
+
+</div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<p>
+© 2026 Ayaan Ashik Mansuri
+</p>
+
+<p>
+Diploma in Electronics Engineering
+</p>
+
+<p>
+Personal Portfolio | Hosted on Localhost
+</p>
+
+</footer>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+function sendMessage(event) {
+
+    event.preventDefault();
+
+    let name =
+    document.getElementById("name").value;
+
+    alert(
+        "Thank you, " +
+        name +
+        "! Your message has been received."
+    );
+
+    document.querySelector("form").reset();
+}
+
+</script>
+
+
+</body>
+
+</html> 
+
+             
+
+            
